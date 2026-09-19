@@ -1646,10 +1646,10 @@ a:focus-visible {
     left: 4px;
   }
 
-  /* Hero Card Stage */
+  /* Hero Card Stage - Pushed Up on Mobile View */
   .card-stage {
     position: relative;
-    height: 170px;
+    height: 240px;
     width: 100%;
     margin: 0 auto;
     flex-shrink: 0;
@@ -1658,18 +1658,18 @@ a:focus-visible {
 
   .feature-card {
     position: absolute;
-    box-shadow: 0 12px 28px rgba(45, 35, 80, 0.12);
+    box-shadow: 0 14px 32px rgba(45, 35, 80, 0.16);
   }
 
   .feature-card--center {
     left: 50%;
     transform: translateX(-50%);
-    width: min(290px, 80vw);
-    height: 180px;
-    bottom: -32px;
+    width: min(300px, 84vw);
+    height: 205px;
+    bottom: 18px;
     z-index: 3;
     background: #f0efff;
-    padding: 18px 22px;
+    padding: 20px 22px;
   }
 
   .feature-card--center p {
@@ -1680,13 +1680,13 @@ a:focus-visible {
 
   .feature-card--left {
     display: flex;
-    left: calc(50% - 170px);
-    bottom: -46px;
-    width: min(250px, 70vw);
-    height: 175px;
+    left: calc(50% - 165px);
+    bottom: 6px;
+    width: min(260px, 74vw);
+    height: 200px;
     transform: rotate(-8deg);
     z-index: 1;
-    opacity: 0.72;
+    opacity: 0.8;
     padding: 18px 20px;
   }
 
@@ -1698,13 +1698,13 @@ a:focus-visible {
 
   .feature-card--right {
     display: flex;
-    right: calc(50% - 170px);
-    bottom: -46px;
-    width: min(250px, 70vw);
-    height: 175px;
+    right: calc(50% - 165px);
+    bottom: 6px;
+    width: min(260px, 74vw);
+    height: 200px;
     transform: rotate(8deg);
     z-index: 1;
-    opacity: 0.72;
+    opacity: 0.8;
     padding: 18px 20px;
   }
 
@@ -1773,24 +1773,43 @@ a:focus-visible {
     font-size: 13px;
   }
 
-  /* Contact Card on Mobile */
+  /* Contact Card on Mobile - High Contrast and Legibility */
   .contact-section {
     padding: 54px 16px;
+  }
+
+  .contact-light-bloom {
+    top: -45%;
+    right: -35%;
+    width: 110%;
+    height: 190%;
+    opacity: 0.22;
+    filter: blur(52px);
   }
 
   .contact-card {
     min-height: auto;
     padding: 44px 20px;
     border-radius: 22px;
+    background: linear-gradient(145deg, #0e0920 0%, #161030 55%, #1e153e 100%);
+    box-shadow:
+      0 24px 60px -12px rgba(10, 7, 26, 0.7),
+      0 0 0 1px rgba(176, 168, 247, 0.28) inset;
   }
 
   .contact-card-title {
     font-size: clamp(26px, 7vw, 36px);
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.95);
   }
 
   .contact-card-subtitle {
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
     margin-bottom: 28px;
+    color: #ffffff !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
   }
 
   .contact-card-actions {
@@ -1800,11 +1819,27 @@ a:focus-visible {
     gap: 12px;
   }
 
-  .button--contact-primary,
+  .button--contact-primary {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+
   .button--contact-glass {
     width: 100%;
     min-height: 48px;
     justify-content: center;
+    background: rgba(16, 11, 36, 0.76);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .button--contact-glass:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.7);
   }
 
   /* FAQ */
@@ -1826,19 +1861,27 @@ a:focus-visible {
     font-size: 30px;
   }
 
+  .card-stage {
+    height: 225px;
+  }
+
   .feature-card--center {
-    width: calc(100% - 32px);
+    width: calc(100% - 28px);
+    bottom: 14px;
+    height: 195px;
     padding: 16px;
   }
 
   .feature-card--left {
-    left: calc(50% - 145px);
-    opacity: 0.55;
+    left: calc(50% - 140px);
+    bottom: 4px;
+    opacity: 0.65;
   }
 
   .feature-card--right {
-    right: calc(50% - 145px);
-    opacity: 0.55;
+    right: calc(50% - 140px);
+    bottom: 4px;
+    opacity: 0.65;
   }
 
   .button--compact {

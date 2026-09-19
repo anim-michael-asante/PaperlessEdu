@@ -120,7 +120,8 @@ currently a valid generated Django scaffold with its migrations package.
   - Collapsed horizontal navigation into an accessible 44x44px touch-target hamburger toggle on mobile screens (`<= 860px`).
   - Added slide-in glassmorphism mobile navigation drawer (`.mobile-drawer`) with keyboard escape support and touch-friendly links (minimum 48px height).
   - Resolved floating badge collision on mobile viewports by safely hiding decorative badges on phone widths (`< 640px`) so typography is 100% unobstructed.
-  - Adjusted hero card stage on mobile with calibrated height and bottom offsets: center dashboard card is fully visible with complete headline text (no text clipping), flanked gracefully by peeking left and right cards.
+  - Lifted the hero cards on mobile view: elevated `.card-stage` to `240px` and lifted the center card to `bottom: 18px` (50px higher than before) while keeping desktop geometry intact. The cards fill the lower hero area, presenting the icons, avatars, and full headlines clearly.
+  - Enhanced contact card contrast on mobile: softened radial light bloom to `opacity: 0.22`, protected all text with dark drop shadows, switched subtitle to `#ffffff`, and gave the secondary button a dark translucent glass backing (`rgba(16, 11, 36, 0.76)`) so all messages are 100% visible against the light transition.
   - Single-column responsive adaptations with fluid typography (`clamp()`) across 375px, 640px, 768px, and desktop viewports.
 - Project Color Multi-Column Footer:
   - Styled `.site-footer` with deep midnight ink background (`linear-gradient(180deg, #0d0a1d 0%, #080613 100%)`) and subtle lavender top border (`1px solid rgba(176, 168, 247, 0.18)`).
