@@ -82,6 +82,41 @@ currently a valid generated Django scaffold with its migrations package.
   - Added official brand emblem to the navigation wordmark, official logo to the contact section, and a clean branded site footer.
   - Standardized icons to Lucide Icons CDN with zero emojis.
 - Added automated unit tests in `core/tests.py` covering route response, favicon links, Open Graph metadata, and brand logo presence (all tests passing).
+- Expanded public landing page with requested sections and navigation tabs:
+  - Navigation links: `How It Works`, `Services`, `What You'll Get`, `Testimonials`, `FAQ`, and `Contact us` button.
+  - **Services Section** (`#services`): 6 core module cards (Student Records & Admissions, Daily & Period Attendance, Gradebook & Continuous Assessment, Instant Report Card PDF Engine, School Fees & Receipts, Automated Parent SMS & Alerts) with Lucide icons.
+  - **What You'll Get Section** (`#what-you-get`): Replaced placeholder section with a 4-pillar value delivery grid detailing Private School Instance, On-Site Staff Training, Historical Record Digitization, and Continuous Support & Daily Backups.
+  - **Testimonials Section** (`#testimonials`): High-trust review cards featuring Headmistress, Finance Administrator, and Academic Director quotes with rating stars and school badges.
+  - **FAQ Section** (`#faq`): Accessible interactive accordion answering questions on setup, devices, offline resilience, custom report card crests, and data protection.
+  - Enhanced mobile navigation: horizontal scrollable pill navigation ribbon ensuring accessible 44px touch targets on mobile viewports.
+  - Added unit tests in `core/tests.py` covering all new navigation tabs, section anchors, and FAQ components (6 tests passing).
+- Redesigned Contact Section based on visual reference image:
+  - Floating dark luminous card (`.contact-card`) with deep midnight navy background (`#080c1f`).
+  - Atmospheric right-side spotlight / light-bloom (`.contact-light-bloom`) blending soft white, icy cyan (`#e0f2fe`), bright teal (`#38bdf8`), and electric violet (`#6366f1`).
+  - Category badge with PaperlessEdu emblem and tracked uppercase title: `SCHOOL ONBOARDING & SETUP`.
+  - Bold, high-contrast title: *"Ready to transform your school?"* and slate subtitle.
+  - Dual action buttons: primary solid white button (*"Talk to us about setup"*) and secondary translucent glass button (*"See how it works"*).
+- Harmonized project colors and ambient grid across all background sections:
+  - Enriched `#services`, `#what-you-get`, `#testimonials`, and `#faq` with subtle ambient radial tints and grid overlays matching the hero aesthetic.
+- Aligned Contact Section with signature project colors:
+  - Replaced harsh cyan/sky-blue lighting with the project's authentic palette: deep midnight plum/violet-ink card canvas (`#100b24` to `#251b47`) framed by soft lavender border highlights (`rgba(176, 168, 247, 0.32)`).
+  - Atmospheric right-side spotlight bloom blending warm radiant cream (`#fff8e6`), luminous golden glow (`#ffe4a0`), soft lavender (`#b0a8f7`), and deep violet (`#7c3aed`) echoing the hero section.
+  - Category pill badge in frosted lavender-violet (`rgba(176, 168, 247, 0.18)`).
+- Designed and implemented modern multi-column footer matching the new visual reference:
+  - 4-column responsive grid: Brand & Aerixis security badge, Platform Navigation, Core Modules, and Stay Updated newsletter signup.
+  - Newsletter subscription pill with `@` prefix, email input, circular submit arrow button, and client-side accessible confirmation feedback.
+  - Clean bottom bar with copyright notice, single-tenant security indicator, and Aerixis attribution.
+  - Footer background styled with project color: deep midnight ink (`linear-gradient(180deg, #0d0a1d 0%, #080613 100%)`) with white headings, legible soft lavender text (`#b3afcb`), branded violet button (`#6358dc`), and high contrast passing WCAG AA.
+- Hero Cards Visibility & Full Responsiveness:
+  - Eliminated negative bottom positioning (`bottom: -54px`) and rigid clipping that previously hid the lower half of cards on laptop viewports.
+  - Converted `.hero` to fluid `min-height: 100dvh; height: auto;` and `.card-stage` into a natural flex layout so cards remain 100% visible inside the viewport.
+  - Interactive elevated fan arrangement on desktop with smooth hover lifts (`translateY(-6px)` and `-14px` on center card).
+  - Full responsiveness across all breakpoints (desktop, tablet wrap, mobile vertical stack) ensuring all 3 cards with their avatars, icons, headlines, and status badges are visible to every visitor.
+- Hero Section Enhancements & Trust Pill:
+  - Added official single-tenant deployment pill: `Single-tenant deployments per school contract` with Lucide `shield-check` icon positioned prominently above the eyebrow in the hero copy.
+  - Upgraded typography contrast and visibility across all hero messages, eyebrow (`font-weight: 800; font-size: 11.5px; color: #484074;`), hero description (`#242133; font-size: clamp(14px, 1.25vw, 16.5px); font-weight: 500;`), navigation links (`#1a1728; font-weight: 600; font-size: clamp(12px, 1.05vw, 13.5px);`), and feature card messages (`#0b0918; clamp(18px, 1.45vw, 21.5px)`).
+  - Strengthened `--muted` color token to `#383547` for high readability throughout all body copy.
+- Expanded automated unit test suite in `core/tests.py` to 10 passing tests (including `test_hero_single_tenant_trust_pill`).
 
 ### Not Yet Built
 

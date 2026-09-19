@@ -82,6 +82,7 @@
         </div>
       </div>
 
+      <!-- Hero & Main Navigation -->
       <section class="hero" aria-labelledby="hero-title">
         <nav class="navigation" aria-label="Main navigation">
           <a class="wordmark" href="{% url 'welcome' %}" aria-label="PaperlessEdu Home">
@@ -96,8 +97,10 @@
           </a>
           <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
-            <a href="#community">For your school</a>
-            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#what-you-get">What You'll Get</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
           </div>
           <div class="nav-actions">
             <a class="button button--dark button--compact" href="#contact"
@@ -161,67 +164,509 @@
         </div>
       </section>
 
-      <section class="supporting-section" id="community">
-        <p class="eyebrow">Made for the people who run school</p>
-        <h2>One system, set up around your school.</h2>
-        <p>
-          We come to your school, configure the system around your workflow, and
-          help your team take it from there.
-        </p>
+      <!-- Services Section -->
+      <section class="content-section" id="services">
+        <div class="section-header">
+          <p class="eyebrow">Core System Modules</p>
+          <h2>Everything your school needs in one connected system.</h2>
+          <p class="section-subtitle">
+            Replace fragmented paper registers and loose spreadsheets with specialized,
+            intuitive tools built for teachers, headmasters, and accounts staff.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i data-lucide="users" class="service-icon"></i>
+            </div>
+            <h3>Student Records & Admissions</h3>
+            <p>
+              Centralized digital records for student bio-data, guardian contacts,
+              medical notes, class histories, and enrollment tracking.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i data-lucide="calendar-check" class="service-icon"></i>
+            </div>
+            <h3>Daily & Period Attendance</h3>
+            <p>
+              Teachers take roll call in seconds from a phone or laptop. Generate
+              daily attendance logs and instant absentee alerts for parents.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i data-lucide="clipboard-list" class="service-icon"></i>
+            </div>
+            <h3>Gradebook & Continuous Assessment</h3>
+            <p>
+              Record classroom exercises, homework, and terminal exam scores with
+              automated calculation of positions, averages, and grading scales.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i data-lucide="file-badge" class="service-icon"></i>
+            </div>
+            <h3>Instant Report Card PDF Engine</h3>
+            <p>
+              Generate whole-class terminal report cards in one click, styled with
+              your school crest, grading legend, and customized head teacher remarks.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i data-lucide="receipt" class="service-icon"></i>
+            </div>
+            <h3>School Fees & Receipts</h3>
+            <p>
+              Track term bills, payment installments, and outstanding balances.
+              Issue digital receipts with a tamper-evident audit trail for board audits.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i data-lucide="message-square" class="service-icon"></i>
+            </div>
+            <h3>Automated Parent SMS & Alerts</h3>
+            <p>
+              Direct SMS communication for fee reminders, meeting invitations, and
+              academic announcements delivered straight to parent mobile phones.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section class="supporting-section supporting-section--last" id="about">
-        <p class="eyebrow">Built for one school at a time</p>
-        <h2>Simple enough for today. Ready for every term.</h2>
+      <!-- What You'll Get Section (Replaces For Your School) -->
+      <section class="content-section content-section--tint" id="what-you-get">
+        <div class="section-header">
+          <p class="eyebrow">What You'll Get</p>
+          <h2>A complete school setup, not just software.</h2>
+          <p class="section-subtitle">
+            We don't just hand you a login link and leave. We partner with your
+            school leadership to transition your administrative workflow smoothly.
+          </p>
+        </div>
+
+        <div class="deliverables-grid">
+          <article class="deliverable-card">
+            <div class="deliverable-header">
+              <div class="deliverable-badge" aria-hidden="true">
+                <i data-lucide="shield-check" class="deliverable-icon"></i>
+              </div>
+              <span class="deliverable-tag">Dedicated Deployment</span>
+            </div>
+            <h3>Your Private School Instance</h3>
+            <p>
+              A private, single-tenant deployment isolated exclusively for your school.
+              Configured with your official school crest, custom term dates, class structures,
+              and grading thresholds.
+            </p>
+            <ul class="deliverable-list">
+              <li><span>Your school branding & color theme</span></li>
+              <li><span>Zero shared data with any other school</span></li>
+              <li><span>High-security role-based access permissions</span></li>
+            </ul>
+          </article>
+
+          <article class="deliverable-card">
+            <div class="deliverable-header">
+              <div class="deliverable-badge" aria-hidden="true">
+                <i data-lucide="presentation" class="deliverable-icon"></i>
+              </div>
+              <span class="deliverable-tag">Hands-on Onboarding</span>
+            </div>
+            <h3>On-Site Staff Training</h3>
+            <p>
+              We visit your school campus in person. We sit down with your teachers,
+              academic heads, and accounts officers until every team member feels
+              empowered and confident.
+            </p>
+            <ul class="deliverable-list">
+              <li><span>Teacher workshops on gradebook & attendance</span></li>
+              <li><span>Administrator and accounts training</span></li>
+              <li><span>Simple quick-reference printed staff guides</span></li>
+            </ul>
+          </article>
+
+          <article class="deliverable-card">
+            <div class="deliverable-header">
+              <div class="deliverable-badge" aria-hidden="true">
+                <i data-lucide="database" class="deliverable-icon"></i>
+              </div>
+              <span class="deliverable-tag">Data Migration</span>
+            </div>
+            <h3>Historical Record Digitization</h3>
+            <p>
+              Never worry about manually retyping years of paper files. We assist
+              your administration in organizing and securely importing your existing
+              student lists and class rosters.
+            </p>
+            <ul class="deliverable-list">
+              <li><span>Spreadsheet & roster data cleanup</span></li>
+              <li><span>Class and stream assignment matching</span></li>
+              <li><span>Guardian contact verification</span></li>
+            </ul>
+          </article>
+
+          <article class="deliverable-card">
+            <div class="deliverable-header">
+              <div class="deliverable-badge" aria-hidden="true">
+                <i data-lucide="life-buoy" class="deliverable-icon"></i>
+              </div>
+              <span class="deliverable-tag">Continuous Support</span>
+            </div>
+            <h3>Direct Support & Daily Backups</h3>
+            <p>
+              Our relationship begins at launch. Your leadership team receives direct
+              WhatsApp and phone support, accompanied by automated daily off-site
+              backups of all student and financial data.
+            </p>
+            <ul class="deliverable-list">
+              <li><span>Automated daily encrypted backups</span></li>
+              <li><span>Priority technical support for term-end exams</span></li>
+              <li><span>Continuous performance & security updates</span></li>
+            </ul>
+          </article>
+        </div>
       </section>
 
+      <!-- Testimonials Section -->
+      <section class="content-section" id="testimonials">
+        <div class="section-header">
+          <p class="eyebrow">Real Leadership Experiences</p>
+          <h2>Trusted by educators and administrators.</h2>
+          <p class="section-subtitle">
+            See how schools eliminate paperwork bottlenecks and streamline terminal reporting.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-hidden="true">
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Generating terminal report cards used to take our staff nearly two
+              weeks of manual calculations and handwriting. With PaperlessEdu, an
+              entire class of report cards is computed, verified, and ready to print
+              in under an hour."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar author-avatar--plum" aria-hidden="true">GM</div>
+              <div class="author-info">
+                <cite class="author-name">Mrs. Grace Mensah</cite>
+                <span class="author-title">Headmistress, Ridgeview Academy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-hidden="true">
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Fee collection tracking was our biggest administrative headache.
+              Parents now receive an automated SMS confirmation the moment payment
+              is recorded, eliminating lost paper receipts and bringing complete clarity
+              to our financial records."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar author-avatar--gold" aria-hidden="true">SO</div>
+              <div class="author-info">
+                <cite class="author-name">Mr. Samuel Osei</cite>
+                <span class="author-title">Finance Administrator, Heritage Academy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-hidden="true">
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+              <i data-lucide="star" class="star-icon"></i>
+            </div>
+            <blockquote class="testimonial-quote">
+              "The hands-on campus training made all the difference for our school.
+              Even teachers who were hesitant with computers mastered the daily roll
+              call and test score entry on their first day. It has simplified our academic terms."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar author-avatar--teal" aria-hidden="true">EA</div>
+              <div class="author-info">
+                <cite class="author-name">Dr. Evelyn Addo</cite>
+                <span class="author-title">Academic Director, St. Jude International</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="content-section content-section--tint" id="faq">
+        <div class="section-header">
+          <p class="eyebrow">Frequently Asked Questions</p>
+          <h2>Everything you need to know about setup.</h2>
+          <p class="section-subtitle">
+            Common questions school proprietors and headmasters ask before making the transition.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>How does the onboarding and school setup process work?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                We handle the technical setup for you. Our team visits your campus,
+                configures your classes, subjects, grading thresholds, and term calendars,
+                helps digitize your current student rosters, and trains your teaching
+                and administration staff in person.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Do our teachers need high-end computers or special equipment?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. PaperlessEdu runs smoothly in any standard web browser on existing
+                laptops, desktop computers, tablets, or smartphones. Teachers can take
+                daily roll call or submit marks directly from their mobile phones
+                without installing large applications.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What happens if our school internet connection is unstable?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                PaperlessEdu is engineered for low-bandwidth conditions. Page payloads
+                are lightweight, and asset caching keeps class lists and rosters
+                accessible even during temporary connectivity dips.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can we customize report cards with our school logo and grading scale?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Every school deployment includes your school crest, motto,
+                headmaster signature space, and tailored grading schemes (percentages,
+                letter grades, WAEC-style scales, or early-childhood rating rubrics).
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How is our school's student and financial data protected?</span>
+              <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                PaperlessEdu uses a single-tenant deployment model where each school's
+                database is strictly isolated. All connections require HTTPS encryption,
+                sensitive financial data is protected by strict permission checks, and
+                automated daily backups ensure no school records are ever lost.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Contact Section (Reference Card Design) -->
       <section class="contact-section" id="contact">
-        <img
-          src="{% static 'core/paperlessedu-logo.png' %}"
-          alt="PaperlessEdu — Modern School Management"
-          class="contact-brand-logo"
-          width="190"
-          height="163"
-          loading="lazy"
-        />
-        <p class="eyebrow">Ready to get started?</p>
-        <h2>Let us set up PaperlessEdu for your school.</h2>
-        <p>
-          Tell us about your school and we will arrange a setup conversation.
-        </p>
-        <a class="button button--dark" href="mailto:hello@paperlessedu.com"
-          >Contact PaperlessEdu</a
-        >
+        <div class="contact-card">
+          <div class="contact-light-bloom" aria-hidden="true"></div>
+          <div class="contact-card-content">
+            <div class="contact-card-badge">
+              <img
+                src="{% static 'core/paperlessedu-icon.png' %}"
+                alt=""
+                class="contact-badge-icon"
+                width="18"
+                height="18"
+              />
+              <span>School Onboarding &amp; Setup</span>
+            </div>
+            <h2 class="contact-card-title">Ready to transform your school?</h2>
+            <p class="contact-card-subtitle">
+              Schedule an on-site consultation and live demonstration for your school leadership.
+            </p>
+            <div class="contact-card-actions">
+              <a class="button button--contact-primary" href="mailto:hello@paperlessedu.com">
+                Talk to us about setup
+              </a>
+              <a class="button button--contact-glass" href="#how-it-works">
+                Learn how it works
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <footer class="site-footer">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <img
-              src="{% static 'core/paperlessedu-icon.png' %}"
-              alt=""
-              class="footer-logo-icon"
-              width="26"
-              height="26"
-            />
-            <span class="footer-wordmark">PaperlessEdu</span>
+      <!-- Footer (Inspiration-Matched Multi-Column Layout) -->
+      <footer class="site-footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-grid">
+            <!-- Col 1: Brand & Tagline -->
+            <div class="footer-col footer-col--brand">
+              <a class="footer-brand" href="{% url 'welcome' %}" aria-label="PaperlessEdu Home">
+                <img
+                  src="{% static 'core/paperlessedu-icon.png' %}"
+                  alt=""
+                  class="footer-logo-icon"
+                  width="30"
+                  height="30"
+                />
+                <span class="footer-wordmark">PaperlessEdu</span>
+              </a>
+              <p class="footer-description">
+                The modern school management system engineered for clarity, auditable grading,
+                and seamless parent communication.
+              </p>
+              <div class="footer-badge">
+                <i data-lucide="shield-check" class="badge-shield-icon"></i>
+                <span>Built by Aerixis &bull; Single-Tenant Security</span>
+              </div>
+            </div>
+
+            <!-- Col 2: Platform Navigation -->
+            <div class="footer-col">
+              <h4 class="footer-heading">Platform</h4>
+              <ul class="footer-nav-list">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#what-you-get">What You'll Get</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Core Modules -->
+            <div class="footer-col">
+              <h4 class="footer-heading">Core Modules</h4>
+              <ul class="footer-nav-list">
+                <li><a href="#services">Student Records (SIS)</a></li>
+                <li><a href="#services">Daily Attendance</a></li>
+                <li><a href="#services">Instant Report Cards</a></li>
+                <li><a href="#services">Fee Billing &amp; Receipts</a></li>
+                <li><a href="#services">Parent SMS Alerts</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Newsletter / Stay Updated -->
+            <div class="footer-col footer-col--newsletter">
+              <h4 class="footer-heading">Stay Updated</h4>
+              <p class="newsletter-text">
+                Receive practical school management guides, feature releases, and digital education insights.
+              </p>
+              <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
+                <div class="newsletter-input-wrap">
+                  <span class="input-at-symbol" aria-hidden="true">@</span>
+                  <input
+                    type="email"
+                    class="newsletter-input"
+                    id="newsletter-email"
+                    placeholder="Enter school email..."
+                    required
+                    aria-label="School email address"
+                  />
+                  <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to updates">
+                    <i data-lucide="arrow-right" class="btn-arrow-icon"></i>
+                  </button>
+                </div>
+                <div class="newsletter-feedback" id="newsletter-feedback" role="status" aria-live="polite"></div>
+              </form>
+            </div>
           </div>
-          <p class="footer-copy">Modern, paperless school management. Built by Aerixis.</p>
-          <div class="footer-links">
-            <a href="#how-it-works">How It Works</a>
-            <a href="#community">For your school</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-bar">
+            <p class="footer-copyright">
+              &copy; 2026 PaperlessEdu. All rights reserved. Single-tenant deployments per school contract.
+            </p>
+            <div class="footer-bottom-meta">
+              <a href="#about" class="meta-link">About Aerixis</a>
+              <span class="meta-dot">&bull;</span>
+              <a href="mailto:hello@paperlessedu.com" class="meta-link">Support</a>
+              <span class="meta-dot">&bull;</span>
+              <a href="#contact" class="meta-link">Request Setup</a>
+            </div>
           </div>
         </div>
       </footer>
     </main>
 
     <script>
+      function handleNewsletter(e) {
+        e.preventDefault();
+        const emailInput = document.getElementById("newsletter-email");
+        const feedback = document.getElementById("newsletter-feedback");
+        if (emailInput && emailInput.value) {
+          feedback.textContent = "Thank you! We will keep your school updated.";
+          feedback.className = "newsletter-feedback newsletter-feedback--success";
+          emailInput.value = "";
+          setTimeout(function () {
+            feedback.textContent = "";
+            feedback.className = "newsletter-feedback";
+          }, 5000);
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         if (window.lucide) {
           window.lucide.createIcons();
         }
+
+        // Accordion behavior: close other FAQ items when one is opened
+        const faqDetails = document.querySelectorAll(".faq-item");
+        faqDetails.forEach((item) => {
+          item.addEventListener("toggle", function () {
+            if (this.open) {
+              faqDetails.forEach((other) => {
+                if (other !== this && other.open) {
+                  other.open = false;
+                }
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
       });
     </script>
   </body>
