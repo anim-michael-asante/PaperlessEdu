@@ -77,3 +77,23 @@ class WelcomePageTests(SimpleTestCase):
         self.assertIn('class="newsletter-input"', content)
         self.assertIn('class="newsletter-submit-btn"', content)
         self.assertIn('class="footer-bottom-bar"', content)
+
+    def test_hero_feature_cards_rendered(self):
+        response = self.client.get(reverse('welcome'))
+        content = response.content.decode('utf-8')
+        self.assertIn('class="card-stage"', content)
+        self.assertIn('class="feature-card feature-card--left"', content)
+        self.assertIn('class="feature-card feature-card--center"', content)
+        self.assertIn('class="feature-card feature-card--right"', content)
+        self.assertIn('Keep attendance clear and easy for every teacher.', content)
+        self.assertIn('See the whole school clearly from one thoughtful dashboard.', content)
+        self.assertIn('Keep families informed without adding more paperwork.', content)
+        self.assertIn('Live overview', content)
+        self.assertIn('Less busywork', content)
+
+    def test_hero_single_tenant_trust_pill(self):
+        response = self.client.get(reverse('welcome'))
+        content = response.content.decode('utf-8')
+        self.assertIn('class="hero-trust-pill"', content)
+        self.assertIn('Single-tenant deployments per school contract', content)
+

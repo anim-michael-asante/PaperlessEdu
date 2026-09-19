@@ -116,6 +116,10 @@ currently a valid generated Django scaffold with its migrations package.
   - Added official single-tenant deployment pill: `Single-tenant deployments per school contract` with Lucide `shield-check` icon positioned prominently above the eyebrow in the hero copy.
   - Upgraded typography contrast and visibility across all hero messages, eyebrow (`font-weight: 800; font-size: 11.5px; color: #484074;`), hero description (`#242133; font-size: clamp(14px, 1.25vw, 16.5px); font-weight: 500;`), navigation links (`#1a1728; font-weight: 600; font-size: clamp(12px, 1.05vw, 13.5px);`), and feature card messages (`#0b0918; clamp(18px, 1.45vw, 21.5px)`).
   - Strengthened `--muted` color token to `#383547` for high readability throughout all body copy.
+- GitHub Pages Static Hosting Workflow:
+  - Configured `.github/workflows/static.yml` to automatically build and deploy pure HTML and CSS to GitHub Pages on pushes to `main`.
+  - Created `export_static.py` to compile the Django `welcome.html` view into a clean, self-contained static `_site` directory with relative links (`./`), static assets, favicon fallback, `.nojekyll`, and automatic Open Graph site URL resolution.
+  - Added `_site/` to `.gitignore`.
 - Expanded automated unit test suite in `core/tests.py` to 10 passing tests (including `test_hero_single_tenant_trust_pill`).
 
 ### Not Yet Built

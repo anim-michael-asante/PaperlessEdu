@@ -38,6 +38,7 @@ htmlcov/
 *.egg-info/
 dist/
 build/
+_site/
 
 # Editors and operating systems
 .vscode/
