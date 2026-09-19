@@ -123,6 +123,9 @@ currently a valid generated Django scaffold with its migrations package.
   - Lifted the hero cards on mobile view: elevated `.card-stage` to `240px` and lifted the center card to `bottom: 18px` (50px higher than before) while keeping desktop geometry intact. The cards fill the lower hero area, presenting the icons, avatars, and full headlines clearly.
   - Enhanced contact card contrast on mobile: softened radial light bloom to `opacity: 0.22`, protected all text with dark drop shadows, switched subtitle to `#ffffff`, and gave the secondary button a dark translucent glass backing (`rgba(16, 11, 36, 0.76)`) so all messages are 100% visible against the light transition.
   - Single-column responsive adaptations with fluid typography (`clamp()`) across 375px, 640px, 768px, and desktop viewports.
+- GitHub Pages Static Compilation & Deployment Workflow:
+  - Created [`export_static.py`](file:///g:/PaperlessEdu/export_static.py) to render the full Django template and package static assets into `_site/` with relative paths (`./static/core/...`), favicons, manifests, and `.nojekyll`.
+  - Configured [`.github/workflows/static.yml`](file:///g:/PaperlessEdu/.github/workflows/static.yml) to checkout, install Python 3.12 dependencies, run `export_static.py _site`, and deploy directly via GitHub Actions Pages pipeline (`actions/deploy-pages@v4`).
 - Project Color Multi-Column Footer:
   - Styled `.site-footer` with deep midnight ink background (`linear-gradient(180deg, #0d0a1d 0%, #080613 100%)`) and subtle lavender top border (`1px solid rgba(176, 168, 247, 0.18)`).
   - High-contrast typography: white headings/wordmark (`#ffffff`), soft lavender links and text (`#b3afcb`), and branded violet newsletter submit button (`#6358dc`).
