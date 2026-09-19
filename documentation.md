@@ -116,6 +116,12 @@ currently a valid generated Django scaffold with its migrations package.
   - Aligned hero copy and card positioning to match reference image `media_1789849963677.png` exactly.
   - Positioned hero cards to peek gracefully from the bottom edge of the viewport with avatars (gold `A` + dark `T` on left card, sparkle icon on center card, dark `S` on right card), headlines, and status labels fully readable.
   - Applied interactive hover lifts on all cards.
+- Mobile-First Responsiveness & Navigation Drawer:
+  - Collapsed horizontal navigation into an accessible 44x44px touch-target hamburger toggle on mobile screens (`<= 860px`).
+  - Added slide-in glassmorphism mobile navigation drawer (`.mobile-drawer`) with keyboard escape support and touch-friendly links (minimum 48px height).
+  - Resolved floating badge collision on mobile viewports by safely hiding decorative badges on phone widths (`< 640px`) so typography is 100% unobstructed.
+  - Adjusted hero card stage on mobile with calibrated height and bottom offsets: center dashboard card is fully visible with complete headline text (no text clipping), flanked gracefully by peeking left and right cards.
+  - Single-column responsive adaptations with fluid typography (`clamp()`) across 375px, 640px, 768px, and desktop viewports.
 - Project Color Multi-Column Footer:
   - Styled `.site-footer` with deep midnight ink background (`linear-gradient(180deg, #0d0a1d 0%, #080613 100%)`) and subtle lavender top border (`1px solid rgba(176, 168, 247, 0.18)`).
   - High-contrast typography: white headings/wordmark (`#ffffff`), soft lavender links and text (`#b3afcb`), and branded violet newsletter submit button (`#6358dc`).
