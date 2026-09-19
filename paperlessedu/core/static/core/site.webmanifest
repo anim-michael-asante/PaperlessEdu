@@ -1,0 +1,20 @@
+{
+  "name": "PaperlessEdu",
+  "short_name": "PaperlessEdu",
+  "description": "Paperless school management system for attendance, grades, report cards, fees, and communication.",
+  "icons": [
+    {
+      "src": "/static/core/paperlessedu-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/core/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#182a4d",
+  "background_color": "#fafafe",
+  "display": "standalone"
+}

@@ -4,17 +4,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PaperlessEdu | School management, set up for you</title>
     <meta
       name="description"
-      content="PaperlessEdu is a school management system set up for individual schools."
+      content="Run your school with less paper and more clarity. PaperlessEdu brings attendance, grades, fees, and communication into one simple, secure system."
     />
-    <title>PaperlessEdu | School management, set up for you</title>
+
+    <!-- Favicon & Device Icons -->
+    <link rel="icon" type="image/x-icon" href="{% static 'core/favicon.ico' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'core/favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'core/apple-touch-icon.png' %}" />
+    <link rel="manifest" href="{% static 'core/site.webmanifest' %}" />
+    <meta name="theme-color" content="#182a4d" />
+
+    <!-- Open Graph / WhatsApp / Facebook / LinkedIn / iMessage Link Previews -->
+    <meta property="og:site_name" content="PaperlessEdu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:title" content="PaperlessEdu | School management, set up for you" />
+    <meta
+      property="og:description"
+      content="Run your school with less paper and more clarity. PaperlessEdu brings attendance, grades, fees, and communication into one simple, secure system."
+    />
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'core/og-image.png' %}" />
+    <meta property="og:image:secure_url" content="{{ request.scheme }}://{{ request.get_host }}{% static 'core/og-image.png' %}" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PaperlessEdu — Modern School Management" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ request.build_absolute_uri }}" />
+    <meta name="twitter:title" content="PaperlessEdu | School management, set up for you" />
+    <meta
+      name="twitter:description"
+      content="Run your school with less paper and more clarity. PaperlessEdu brings attendance, grades, fees, and communication into one simple, secure system."
+    />
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'core/og-image.png' %}" />
+    <meta name="twitter:image:alt" content="PaperlessEdu — Modern School Management" />
+
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'core/welcome.css' %}" />
   </head>
   <body>
@@ -26,23 +68,32 @@
           <span class="traffic-light traffic-light--green"></span>
         </div>
         <div class="browser-controls" aria-hidden="true">
-          <span>&lsaquo;</span>
-          <span>&rsaquo;</span>
+          <i data-lucide="chevron-left" class="browser-icon"></i>
+          <i data-lucide="chevron-right" class="browser-icon"></i>
         </div>
         <div class="address-bar">
-          <span class="lock" aria-hidden="true">&#128274;</span>
-          paperlessedu.com
+          <i data-lucide="lock" class="browser-lock-icon"></i>
+          <span>paperlessedu.com</span>
         </div>
         <div class="browser-actions" aria-hidden="true">
-          <span>&#8593;</span>
-          <span>+</span>
-          <span>&#9633;</span>
+          <i data-lucide="arrow-up-right" class="browser-icon"></i>
+          <i data-lucide="plus" class="browser-icon"></i>
+          <i data-lucide="square" class="browser-icon"></i>
         </div>
       </div>
 
       <section class="hero" aria-labelledby="hero-title">
         <nav class="navigation" aria-label="Main navigation">
-          <a class="wordmark" href="{% url 'welcome' %}">PaperlessEdu</a>
+          <a class="wordmark" href="{% url 'welcome' %}" aria-label="PaperlessEdu Home">
+            <img
+              class="wordmark-icon"
+              src="{% static 'core/paperlessedu-icon.png' %}"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span class="wordmark-text">PaperlessEdu</span>
+          </a>
           <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
             <a href="#community">For your school</a>
@@ -57,10 +108,10 @@
 
         <div class="hero-copy">
           <div class="floating-badge floating-badge--violet" aria-hidden="true">
-            <span>+</span>
+            <i data-lucide="plus" class="badge-icon"></i>
           </div>
           <div class="floating-badge floating-badge--yellow" aria-hidden="true">
-            <span>✓</span>
+            <i data-lucide="check" class="badge-icon"></i>
           </div>
           <p class="eyebrow">School management, set up for you</p>
           <h1 id="hero-title">
@@ -92,7 +143,9 @@
             <span class="card-meta">Every school day</span>
           </article>
           <article class="feature-card feature-card--center">
-            <div class="card-icon" aria-hidden="true">✦</div>
+            <div class="card-icon" aria-hidden="true">
+              <i data-lucide="sparkles" class="feature-icon"></i>
+            </div>
             <p>See the whole school clearly from one thoughtful dashboard.</p>
             <div class="card-stats">
               <span>Live overview</span><span class="dot"></span
@@ -123,6 +176,14 @@
       </section>
 
       <section class="contact-section" id="contact">
+        <img
+          src="{% static 'core/paperlessedu-logo.png' %}"
+          alt="PaperlessEdu — Modern School Management"
+          class="contact-brand-logo"
+          width="190"
+          height="163"
+          loading="lazy"
+        />
         <p class="eyebrow">Ready to get started?</p>
         <h2>Let us set up PaperlessEdu for your school.</h2>
         <p>
@@ -132,6 +193,36 @@
           >Contact PaperlessEdu</a
         >
       </section>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="{% static 'core/paperlessedu-icon.png' %}"
+              alt=""
+              class="footer-logo-icon"
+              width="26"
+              height="26"
+            />
+            <span class="footer-wordmark">PaperlessEdu</span>
+          </div>
+          <p class="footer-copy">Modern, paperless school management. Built by Aerixis.</p>
+          <div class="footer-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#community">For your school</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </footer>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
   </body>
 </html>
