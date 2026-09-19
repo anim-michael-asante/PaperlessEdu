@@ -112,15 +112,18 @@ currently a valid generated Django scaffold with its migrations package.
   - Converted `.hero` to fluid `min-height: 100dvh; height: auto;` and `.card-stage` into a natural flex layout so cards remain 100% visible inside the viewport.
   - Interactive elevated fan arrangement on desktop with smooth hover lifts (`translateY(-6px)` and `-14px` on center card).
   - Full responsiveness across all breakpoints (desktop, tablet wrap, mobile vertical stack) ensuring all 3 cards with their avatars, icons, headlines, and status badges are visible to every visitor.
-- Hero Section Enhancements & Trust Pill:
-  - Added official single-tenant deployment pill: `Single-tenant deployments per school contract` with Lucide `shield-check` icon positioned prominently above the eyebrow in the hero copy.
-  - Upgraded typography contrast and visibility across all hero messages, eyebrow (`font-weight: 800; font-size: 11.5px; color: #484074;`), hero description (`#242133; font-size: clamp(14px, 1.25vw, 16.5px); font-weight: 500;`), navigation links (`#1a1728; font-weight: 600; font-size: clamp(12px, 1.05vw, 13.5px);`), and feature card messages (`#0b0918; clamp(18px, 1.45vw, 21.5px)`).
-  - Strengthened `--muted` color token to `#383547` for high readability throughout all body copy.
+- Hero Section Alignment with Reference Image:
+  - Aligned hero copy and card positioning to match reference image `media_1789849963677.png` exactly.
+  - Positioned hero cards to peek gracefully from the bottom edge of the viewport with avatars (gold `A` + dark `T` on left card, sparkle icon on center card, dark `S` on right card), headlines, and status labels fully readable.
+  - Applied interactive hover lifts on all cards.
+- Project Color Multi-Column Footer:
+  - Styled `.site-footer` with deep midnight ink background (`linear-gradient(180deg, #0d0a1d 0%, #080613 100%)`) and subtle lavender top border (`1px solid rgba(176, 168, 247, 0.18)`).
+  - High-contrast typography: white headings/wordmark (`#ffffff`), soft lavender links and text (`#b3afcb`), and branded violet newsletter submit button (`#6358dc`).
 - GitHub Pages Static Hosting Workflow:
   - Configured `.github/workflows/static.yml` to automatically build and deploy pure HTML and CSS to GitHub Pages on pushes to `main`.
   - Created `export_static.py` to compile the Django `welcome.html` view into a clean, self-contained static `_site` directory with relative links (`./`), static assets, favicon fallback, `.nojekyll`, and automatic Open Graph site URL resolution.
   - Added `_site/` to `.gitignore`.
-- Expanded automated unit test suite in `core/tests.py` to 10 passing tests (including `test_hero_single_tenant_trust_pill`).
+- Expanded automated unit test suite in `core/tests.py` to 10 passing tests.
 
 ### Not Yet Built
 

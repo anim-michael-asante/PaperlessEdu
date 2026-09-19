@@ -87,13 +87,13 @@ class WelcomePageTests(SimpleTestCase):
         self.assertIn('class="feature-card feature-card--right"', content)
         self.assertIn('Keep attendance clear and easy for every teacher.', content)
         self.assertIn('See the whole school clearly from one thoughtful dashboard.', content)
-        self.assertIn('Keep families informed without adding more paperwork.', content)
+        self.assertIn('Keep families informed without adding more work.', content)
         self.assertIn('Live overview', content)
         self.assertIn('Less busywork', content)
 
-    def test_hero_single_tenant_trust_pill(self):
+    def test_single_tenant_security_statement(self):
         response = self.client.get(reverse('welcome'))
         content = response.content.decode('utf-8')
-        self.assertIn('class="hero-trust-pill"', content)
         self.assertIn('Single-tenant deployments per school contract', content)
+
 
